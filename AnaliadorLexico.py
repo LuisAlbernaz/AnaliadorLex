@@ -47,7 +47,7 @@ def analisador_lexico(codigo):
     return resultado, simbolos, erros
 
 def gerar_saida(resultado, simbolos, erros, nome_arquivo="saida.txt"):
-    with open(nome_arquivo, 'w') as f:
+    with open(nome_arquivo, 'w', encoding='utf-8') as f:
         f.write("Código do programa fonte: while i < 100 do i = i + j;\n\n")
         f.write("Tokens:\n")
         f.write("{:<10} {:<20} {:<10} {:<10}\n".format("token", "identificação", "tamanho", "posição (lin, col)"))
